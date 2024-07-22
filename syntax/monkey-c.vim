@@ -10,7 +10,7 @@ syn match	monkeyCFunction		"\zs\(\k\w*\)*\s*\ze("
 syn keyword	monkeyCRepeat		for do while break continue
 syn keyword	monkeyCConditional	if else
 syn match	monkeyCInclude		"\vToybox(.\u\w+)*[^;]"
-syn keyword	monkeyCKeyword		using as extends has instanceof self me
+syn keyword	monkeyCKeyword		import using as extends has instanceof typedef self me
 syn keyword	monkeyCStatement	new return hidden public protected private
 syn keyword	monkeyCException	try catch throw finally
 syn keyword	monkeyCStorageClass	var const
