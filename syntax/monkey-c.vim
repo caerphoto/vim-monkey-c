@@ -6,7 +6,6 @@ syn region	monkeyCString		start=/\v"/ skip=/\v\\./ end=/\v"/
 syn match	monkeyCCharacter	"L\='[^\\]'"
 syn keyword	monkeyCBoolean		false true
 syn keyword	monkeyCNull		null
-" syn match	monkeyCFunction		"\v[. \t][a-zA-Z][a-zA-Z0-9_]*\?=("
 syn match	monkeyCFunction		"\zs\(\k\w*\)*\s*\ze("
 syn keyword	monkeyCRepeat		for do while break continue
 syn keyword	monkeyCConditional	if else
