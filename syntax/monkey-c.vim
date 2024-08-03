@@ -1,7 +1,7 @@
 if exists("b:current_syntax")
     finish
 endif
-syn region	monkeyCFold		start="{" end="}" transparent fold
+syn region	monkeyCBlock		start="{" end="}" transparent fold
 
 syn region	monkeyCString		start=/\v"/ skip=/\v\\./ end=/\v"/
 syn match	monkeyCCharacter	"L\='[^\\]'"
@@ -52,6 +52,8 @@ syn region	monkeyCComment		start="/\*" end="\*/" contains=@Spell,monkeyCTodo
 " apocryphal
 syn keyword	monkeyCDebug		print assert format
 
+syn sync fromstart
+
 hi link	monkeyCString		String
 hi link	monkeyCCharacter	Character
 hi link	monkeyCBoolean		Constant
@@ -73,5 +75,6 @@ hi link	monkeyCLabel		Label
 hi link	monkeyCComment		Comment
 hi link	monkeyCTodo		Todo
 hi link	monkeyCDebug		Debug
+hi link monkeyCBlock		Delimiter
 
 let b:current_syntax = "monkey-c"
