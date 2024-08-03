@@ -1,6 +1,7 @@
 if exists("b:current_syntax")
     finish
 endif
+syn region	monkeyCFold		start="{" end="}" transparent fold
 
 syn region	monkeyCString		start=/\v"/ skip=/\v\\./ end=/\v"/
 syn match	monkeyCCharacter	"L\='[^\\]'"
